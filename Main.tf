@@ -84,7 +84,7 @@ resource "aws_route_table_association" "private" {
 resource "aws_route" "private_route-1" {
   route_table_id         = aws_route_table.rt_for_private_subnet.id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_nat_gateway.my_nat_gw.id
+  nat_gateway_id             = aws_nat_gateway.my_nat_gw.id
 }
 
 # create RT for public subnet
